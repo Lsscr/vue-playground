@@ -13,6 +13,7 @@ const count = ref(0)
     <h2>{{ message }}</h2>
     <button @click="callServerlessFunction">调用 Serverless 函数</button>
     <p v-if="result">{{ result }}</p>
+    重新再来一次
   </div>
 </template>
 
