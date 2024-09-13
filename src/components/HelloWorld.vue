@@ -9,32 +9,30 @@ const count = ref(0)
 </script>
 
 <template>
-  <h1>{{ msg }}</h1>
-
-  <div class="card">
-    <button type="button" @click="count++">count is {{ count }}</button>
-    <p>
-      Edit
-      <code>components/HelloWorld.vue</code> to test HMR
-    </p>
+  <div>
+    <h2>{{ message }}</h2>
+    <button @click="callServerlessFunction">调用 Serverless 函数</button>
+    <p v-if="result">{{ result }}</p>
   </div>
-
-  <p>
-    Check out
-    <a href="https://vuejs.org/guide/quick-start.html#local" target="_blank"
-      >create-vue</a
-    >, the official Vue + Vite starter
-  </p>
-  <p>
-    Learn more about IDE Support for Vue in the
-    <a
-      href="https://vuejs.org/guide/scaling-up/tooling.html#ide-support"
-      target="_blank"
-      >Vue Docs Scaling up Guide</a
-    >.
-  </p>
-  <p class="read-the-docs">Click on the Vite and Vue logos to learn more</p>
 </template>
+
+<script setup>
+import { ref } from 'vue'
+
+const message = ref('欢迎使用 Vue Serverless 项目')
+const result = ref('')
+
+const callServerlessFunction = async () => {
+  try {
+    const response = await fetch('/.netlify/functions/hello')
+    const data = await response.json()
+    result.value = data.message
+  } catch (error) {
+    console.error('调用 serverless 函数出错:', error)
+    result.value = '调用失败，请查看控制台'
+  }
+}
+</script>
 
 <style scoped>
 .read-the-docs {
