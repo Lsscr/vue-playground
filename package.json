@@ -1,5 +1,6 @@
 {
   "name": "vue-serverless-project",
+  "homepage": "https://lsscr.github.io/vue-playground",
   "version": "0.0.0",
   "scripts": {
     "dev": "vite",

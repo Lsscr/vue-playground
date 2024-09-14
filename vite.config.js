@@ -6,6 +6,6 @@ import vue from "@vitejs/plugin-vue";
 export default defineConfig((command) => ({
   plugins: [vue(), UnoCSS()],
   base: command === 'build'
-    ? '/lsscr.github.io/'
+    ? '/vue-playground/'
     : '/'
 }));
