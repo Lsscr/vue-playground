@@ -1,17 +1,18 @@
 <template>
-  <div>
-    <h1>{{ message }}</h1>
-    <ReactSpinner />
-  </div>
+<div>
+  <VideoHome />
+</div>
 </template>
 
 <script>
 import { ref, onMounted } from 'vue'
 import ReactSpinner from './components/ReactSpinner.vue'
+import VideoHome from './views/VideoHome.vue';
 
 export default {
   components: {
-    ReactSpinner
+    ReactSpinner,
+    VideoHome
   },
   setup() {
     const message = ref('')
