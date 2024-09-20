@@ -6,7 +6,7 @@
                 <div class="flex justify-between h-16">
                     <div class="flex">
                         <div class="flex-shrink-0 flex items-center">
-                            <img class="h-8 w-auto" src="/placeholder.svg?height=32&width=32" alt="Logo" />
+                            <!-- <img class="h-8 w-auto" src="/placeholder.svg?height=32&width=32" alt="Logo" /> -->
                             <span class="ml-2 text-xl font-bold text-gray-900">VideoHub</span>
                         </div>
                         <div class="hidden sm:ml-6 sm:flex sm:space-x-8">
@@ -53,8 +53,8 @@
                 </div>
             </div>
             <div class="lg:absolute lg:inset-y-0 lg:right-0 lg:w-1/2">
-                <img class="h-56 w-full object-cover sm:h-72 md:h-96 lg:w-full lg:h-full"
-                    src="/placeholder.svg?height=600&width=800" alt="Video banner" />
+                <!-- <img class="h-56 w-full object-cover sm:h-72 md:h-96 lg:w-full lg:h-full"
+                    src="/placeholder.svg?height=600&width=800" alt="Video banner" /> -->
             </div>
         </div>
 
@@ -67,7 +67,7 @@
                 <div v-for="video in videos" :key="video.id" class="group relative">
                     <div
                         class="w-full bg-gray-200 aspect-w-16 aspect-h-9 rounded-lg overflow-hidden group-hover:opacity-75">
-                        <img :src="video.thumbnail" alt="" class="w-full h-full object-center object-cover" />
+                        <!-- <img :src="video.thumbnail" alt="" class="w-full h-full object-center object-cover" /> -->
                     </div>
                     <div class="mt-4 flex justify-between">
                         <div>
